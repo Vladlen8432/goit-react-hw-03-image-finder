@@ -11,7 +11,7 @@ class Searchbar extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    this.props.onSubmit(this.state.query);
+    this.props.onCLick(this.state.query);
     this.setState({ query: '' });
   };
 
@@ -20,8 +20,8 @@ class Searchbar extends Component {
 
     return (
       <header className="searchbar">
-        <form className="form" onSubmit={this.handleSubmit}>
-          <button type="submit" className="button">
+        <form className="form" onClick={this.handleSubmit}>
+          <button type="button" className="button">
             <span className="button-label">Search</span>
           </button>
 

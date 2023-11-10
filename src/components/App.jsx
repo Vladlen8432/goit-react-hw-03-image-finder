@@ -61,7 +61,7 @@ export const App = () => {
 
   return (
     <div>
-      <Searchbar onSubmit={handleSearch} setSearchQuery={setSearchQuery} />
+      <Searchbar onClick={handleSearch} setSearchQuery={setSearchQuery} />
       {images.length > 0 && (
         <ImageGallery images={images} onImageClick={handleImageClick}>
           {images.map((image, index) => (
