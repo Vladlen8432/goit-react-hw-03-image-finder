@@ -1,11 +1,15 @@
-import {Puff} from 'react-loader-spinner';
+import React, { Component } from 'react';
+import { InfinitySpin } from 'react-loader-spinner';
+import css from './Loader.module.css'
 
-const LoaderComponent = () => {
-  return (
-    <div className="loader-container">
-      <Puff type="Puff" color="#00BFFF" height={100} width={100} />
-    </div>
-  );
-};
+class Loader extends Component {
+  render() {
+    return (
+      <div className={css.loaderContainer} style={{transform: 'translateX(6%)'}}>
+        <InfinitySpin type="Puff" color="#00BFFF" height={400} width={400} />
+      </div>
+    );
+  }
+}
 
-export default LoaderComponent;
+export default Loader;

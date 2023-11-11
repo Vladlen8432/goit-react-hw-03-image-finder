@@ -1,25 +1,19 @@
-import Button from '../Button/Button';
-import React, { useState } from 'react';
+import { Component } from 'react';
+import ImageGalleryItem from './ImageGalleryItem';
+import css from './ImageGallery.module.css'
 
-const ImageGallery = ({ images }) => {
-  const [visibleImages, setVisibleImages] = useState(12);
-  const loadMore = () => {
-    setVisibleImages(visibleImages + 12);
-  };
+class ImageGallery extends Component {
+  render() {
+    const { images, onClick } = this.props;
 
-  return (
-    <div>
-      <ul className="gallery">
-        {images &&
-          images.slice(0, visibleImages).map((image, index) => (
-            <li key={index} className="gallery-item">
-              <img src={image.webformatURL} alt={`By ${image.user}`} />
-            </li>
-          ))}
+    return (
+      <ul className={css.gallery}>
+        {images.map(image => (
+          <ImageGalleryItem key={image.id} image={image} onClick={onClick} />
+        ))}
       </ul>
-      {images && visibleImages < images.length && <Button onClick={loadMore} />}
-    </div>
-  );
-};
+    );
+  }
+}
 
 export default ImageGallery;
