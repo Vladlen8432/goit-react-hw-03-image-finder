@@ -22,12 +22,12 @@ class Modal extends Component {
 
   componentDidMount() {
     window.addEventListener('keydown', this.handleKeyPress);
-    document.body.style.overflow = 'hidden'
+    document.body.style.overflow = 'hidden';
   }
 
   componentWillUnmount() {
     window.removeEventListener('keydown', this.handleKeyPress);
-    document.body.style.overflow = 'auto'
+    document.body.style.overflow = 'auto';
   }
 
   render() {

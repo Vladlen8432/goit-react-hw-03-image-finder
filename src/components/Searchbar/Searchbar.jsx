@@ -16,10 +16,10 @@ class Searchbar extends Component {
   handleSubmit = e => {
     e.preventDefault();
 
-    const {query} = this.state;
+    const { query } = this.state;
 
-    if(query.trim() === '') {
-      alert('Please, enter a keyword')
+    if (query.trim() === '') {
+      alert('Please, enter a keyword');
       return;
     }
 
@@ -34,7 +34,13 @@ class Searchbar extends Component {
         <form className={css.form} onSubmit={this.handleSubmit}>
           <button type="submit" className={css.button}>
             <span className={css.buttonLabel}>
-            <FaSearch style={{width: '16px', height: '16px', color: 'rgba(0, 0, 0, 0.5)'}}/>
+              <FaSearch
+                style={{
+                  width: '16px',
+                  height: '16px',
+                  color: 'rgba(0, 0, 0, 0.5)',
+                }}
+              />
             </span>
           </button>
 

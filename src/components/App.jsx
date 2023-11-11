@@ -86,7 +86,7 @@ class App extends Component {
     const { images, isLoading, isModalOpen, modalImage } = this.state;
 
     return (
-      <div style={{padding: '10px 10px 10px 10px'}}>
+      <div style={{ padding: '10px 10px 10px 10px' }}>
         <Searchbar onSubmit={this.handleSearch} />
         <ImageGallery images={images} onClick={this.handleImageClick} />
         {isLoading && <Loader />}

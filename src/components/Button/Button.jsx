@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import css from './Button.module.css'
+import css from './Button.module.css';
 
 class Button extends Component {
   render() {
@@ -8,8 +8,8 @@ class Button extends Component {
     return (
       <div className={css.buttonContainer}>
         <button type="button" className={css.button} onClick={onClick}>
-        Load more
-      </button>
+          Load more
+        </button>
       </div>
     );
   }
